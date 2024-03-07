@@ -10,9 +10,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { PisoB1Component } from './basicas/piso1/piso1.component';
-import { PisoB2Component } from './basicas/piso2/piso2.component'; 
-import { PisoB3Component } from './basicas/piso3/piso3.component';
+import { PisoC1Component } from './culturales/piso1/piso1.component'; 
 import { PisoI1Component } from './ingenieria/piso1/piso1.component';
 import { PisoI2Component } from './ingenieria/piso2/piso2.component'; 
 import { PisoI3Component } from './ingenieria/piso3/piso3.component'; 
@@ -30,9 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     ToolbarComponent,
     HomeComponent,
-    PisoB1Component,
-    PisoB2Component,
-    PisoB3Component,
+    PisoC1Component,
     PisoI1Component,
     PisoI2Component,
     PisoI3Component,

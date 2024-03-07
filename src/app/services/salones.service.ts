@@ -20,4 +20,10 @@ export class SalonesService {
   obtenerSalonesPorEdificioYPiso(idEdificio: number, numPiso: number): Observable<Salones[]> {
     return this.http.get<Salones[]>(`${environment.apiUrl}/salones/${idEdificio}/${numPiso}`, OPTIONS);
   }
+
+  actualizarEstadoSalon(salonId: number, nuevoEstado: string) {
+    const url = `${environment.apiUrl}/salones/${salonId}`;
+    const body = { estado: nuevoEstado };
+    return this.http.put(url, body);
+  }
 }
