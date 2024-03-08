@@ -46,12 +46,22 @@ export class PisoC1Component implements OnInit{
     if (salon.id) {
       this.salonesService.actualizarEstadoSalon(salon.id, nuevoEstado).subscribe(
         () => {
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Actualizacion",
-            text: "El Salon '" + salon.nombre + "' ahora esta " + estado,
-          });
+          if(salon.laboratorio == 'SI'){
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Actualizacion",
+              text: "El Laboratorio '" + salon.nombre + "' ahora esta " + estado,
+            });
+          }
+          else{
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Actualizacion",
+              text: "El Salon '" + salon.nombre + "' ahora esta " + estado,
+            });
+          }
         },
         (error) => {
           console.error('Error al actualizar el estado del salón', error);
