@@ -21,6 +21,8 @@ import { CardModule } from 'primeng/card';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PlantabajaIComponent } from './ingenieria/plantabaja-i/plantabaja-i.component';
+import { PlantabajaSComponent } from './sociales/plantabaja-s/plantabaja-s.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { HttpClientModule } from '@angular/common/http';
     PisoI3Component,
     PisoS1Component,
     PisoS2Component,
-    PisoS3Component
+    PisoS3Component,
+    PlantabajaIComponent,
+    PlantabajaSComponent
   ],
   imports: [
     BrowserModule,
