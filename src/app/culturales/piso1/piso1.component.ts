@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 
 export class PisoC1Component implements OnInit{
   stateOptions: any[] = [
-    { label: 'Desocupado', value: 'OFF' },
+    { label: 'Disponible', value: 'OFF' },
     { label: 'Ocupado', value: 'ON' }
   ];
 
@@ -38,7 +38,7 @@ export class PisoC1Component implements OnInit{
     let estado = ''; 
     switch(nuevoEstado){
       case 'OFF':
-        estado = 'Desocupado';
+        estado = 'Disponible';
       break;
       case 'ON':
         estado = 'Ocupado';

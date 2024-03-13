@@ -26,4 +26,12 @@ export class SalonesService {
     const body = { estado: nuevoEstado };
     return this.http.put(url, body);
   }
+
+  obtenerConteoEstados(): Observable<any> {
+    return this.http.get<any>(`${environment.apiUrl}/salones/obtener-conteo-estados`);
+  }
+
+  obtenerSalonesConEstadoOFF(): Observable<any> {
+    return this.http.get(`${environment.apiUrl}/salones/libres`);
+  }
 }

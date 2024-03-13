@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PlantabajaIComponent } from './ingenieria/plantabaja-i/plantabaja-i.component';
 import { PlantabajaSComponent } from './sociales/plantabaja-s/plantabaja-s.component';
+import { PanelModule } from 'primeng/panel';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { PlantabajaSComponent } from './sociales/plantabaja-s/plantabaja-s.compo
     CardModule,
     SelectButtonModule, 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

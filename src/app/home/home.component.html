@@ -1,5 +1,59 @@
 <div class="content" role="main">
     <span class="title">SISTEMA DE SALONES LIBRES EN UPIICSA</span>
     <br>
-    <h2>Bienvenido a primer Sistema</h2>
+    <div style="display: flex; margin-top: 20px;">
+        <p-card header="CULTURALES" [style]="{ width: '360px' } " class="cards">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../assets/culturales.jpg" />
+            </ng-template>
+            <ng-template pTemplate="footer">
+                
+            </ng-template>
+        </p-card>
+        <p-card header="INGENIERIA" [style]="{ width: '360px' }" class="cards">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../assets/ingenieria.jpg" />
+            </ng-template>
+            <ng-template pTemplate="footer">
+            
+            </ng-template>
+        </p-card>
+        <p-card header="SOCIALES" [style]="{ width: '360px' }" class="cards">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="../../assets/sociales.jpg" />
+            </ng-template>
+            <ng-template pTemplate="footer">
+            
+            </ng-template>
+        </p-card>
+    </div>
+    <div style="margin-top: 80px; width: 80%;">
+        <span class="title">Salones Libres:</span><br><br>
+        <div>
+            <h4 style="text-align: start;" *ngIf="bandera1 == true"><b>Culturales</b></h4><br>
+            <div *ngFor="let item of salonesLibres">
+                <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Culturales'">
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
+                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                </p-panel>
+            </div>
+            <h4 style="text-align: start;" *ngIf="bandera2 == true"><b>Ingenieria</b></h4><br>
+            <div *ngFor="let item of salonesLibres">
+                <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Ingenieria'">
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
+                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                </p-panel>
+            </div>
+            <h4 style="text-align: start;" *ngIf="bandera3 == true"><b>Sociales</b></h4><br>
+            <div *ngFor="let item of salonesLibres">
+                <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Sociales'">
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
+                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                </p-panel>
+            </div>
+        </div>
+    </div>
+    <span class="title" style="margin-top: 50px;">Estadisticas Generales</span>	
+    <div id="chartdiv" style="width: 800px; height: 500px;"></div>
+    
 </div>
