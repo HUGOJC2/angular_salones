@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   bandera1: boolean = false;
   bandera2: boolean = false;
   bandera3: boolean = false;
+  titulo: boolean = false;
   constructor(private salonesService: SalonesService) {}
   
   ngOnInit() {
@@ -85,6 +86,9 @@ export class HomeComponent implements OnInit {
     this.salonesService.obtenerSalonesConEstadoOFF().subscribe(
       (data: SalonResponse[]) => {
         this.salonesLibres = data;
+        if(this.salonesLibres.length != 0){
+          this.titulo = true;
+        }
         this.salonesLibres.forEach((salon) => {
           if(salon.edificio.nombre == 'Culturales'){
             this.bandera1 = true;

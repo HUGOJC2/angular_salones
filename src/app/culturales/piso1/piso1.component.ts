@@ -24,8 +24,8 @@ export class PisoC1Component implements OnInit{
   }
 
   obtenerSalones(){
-    this.salonesService.obtenerSalonesPorEdificioYPiso(1, 1).subscribe(salones => {
-      this.salones = salones;
+    this.salonesService.obtenerSalonesPorEdificioYPiso(2, 6).subscribe(data => {
+      this.salones = data;
     },
     error => {
       console.error('Error al obtener los salones', error);
@@ -51,7 +51,7 @@ export class PisoC1Component implements OnInit{
               position: "center",
               icon: "success",
               title: "Actualizacion",
-              text: "El Laboratorio '" + salon.nombre + "' ahora esta " + estado,
+              text: "El '" + salon.nombre + "' ahora esta " + estado,
             });
           }
           else{

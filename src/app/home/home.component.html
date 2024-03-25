@@ -20,7 +20,7 @@
         </p-card>
         <p-card header="SOCIALES" [style]="{ width: '360px' }" class="cards">
             <ng-template pTemplate="header">
-                <img alt="Card" src="../../assets/sociales.jpg" />
+                <img alt="Card" src="../../assets/sociales.jpeg" />
             </ng-template>
             <ng-template pTemplate="footer">
             
@@ -28,27 +28,33 @@
         </p-card>
     </div>
     <div style="margin-top: 80px; width: 80%;">
-        <span class="title">Salones Libres:</span><br><br>
+        <span class="title" *ngIf="titulo == true">Salones Libres:</span><br><br>
         <div>
-            <h4 style="text-align: start;" *ngIf="bandera1 == true"><b>Culturales</b></h4><br>
-            <div *ngFor="let item of salonesLibres">
+            <h4 style="text-align: start;" *ngIf="bandera1 == true"><b>Culturales</b></h4>
+            <div *ngFor="let item of salonesLibres" style="margin-bottom: 30px;">
                 <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Culturales'">
-                    <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
-                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 6"><span class="text-primary font-semibold text-xl">Primer Piso</span></ng-template>
+                    <p style="text-align: start;">Cantidad: {{ item.cantidadSalonesOFF }}</p>
                 </p-panel>
             </div>
             <h4 style="text-align: start;" *ngIf="bandera2 == true"><b>Ingenieria</b></h4><br>
-            <div *ngFor="let item of salonesLibres">
+            <div *ngFor="let item of salonesLibres" style="margin-bottom: 30px;">
                 <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Ingenieria'">
                     <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
-                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 2"><span class="text-primary font-semibold text-xl">Primer Piso</span></ng-template>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 3"><span class="text-primary font-semibold text-xl">Segundo Piso</span></ng-template>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 4"><span class="text-primary font-semibold text-xl">Tercer Piso</span></ng-template>
+                    <p style="text-align: start;">Cantidad: {{ item.cantidadSalonesOFF }}</p>
                 </p-panel>
             </div>
-            <h4 style="text-align: start;" *ngIf="bandera3 == true"><b>Sociales</b></h4><br>
-            <div *ngFor="let item of salonesLibres">
+            <h4 style="text-align: start;" *ngIf="bandera3 == true"><b>Sociales</b></h4>
+            <div *ngFor="let item of salonesLibres" style="margin-bottom: 30px;">
                 <p-panel style="width: 80%;" *ngIf="item.edificio.nombre == 'Sociales'">
-                    <ng-template pTemplate="header" *ngIf="item.piso.id == 1"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
-                    <p style="text-align: start;">Cantidad de salones Libres: {{ item.cantidadSalonesOFF }}</p>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 7"><span class="text-primary font-semibold text-xl">Planta Baja</span></ng-template>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 8"><span class="text-primary font-semibold text-xl">Primer Piso</span></ng-template>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 9"><span class="text-primary font-semibold text-xl">Segundo Piso</span></ng-template>
+                    <ng-template pTemplate="header" *ngIf="item.piso.id == 10"><span class="text-primary font-semibold text-xl">Tercer Piso</span></ng-template>
+                    <p style="text-align: start;">Cantidad: {{ item.cantidadSalonesOFF }}</p>
                 </p-panel>
             </div>
         </div>

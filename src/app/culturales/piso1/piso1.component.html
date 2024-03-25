@@ -1,19 +1,19 @@
 <div class="content" role="main">
     <span class="title">PRIMER PISO DE CULTURALES</span>
 
-    <div style="display: flex;">
-        <div style="margin-top: 20px; margin-left: 20px;" *ngFor="let salon of salones">
-            <p-card *ngIf="salon.laboratorio === 'SI'" header="Laboratorio {{salon.nombre}}" [style]="{ width: '360px' }" class="cards">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <div style="margin-top: 20px; margin-right: 20px;" *ngFor="let salon of salones">
+            <p-card *ngIf="salon.laboratorio === 'Si'" header="{{salon.nombre}}" [style]="{ width: '360px' }" class="cards">
                 <ng-template pTemplate="header">
-                    <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+                    <img alt="Card" src="../../../assets/Laboratorio.jpeg" />
                 </ng-template>
                 <ng-template pTemplate="footer">
                     <p-selectButton [options]="stateOptions" [(ngModel)]="salon.estado" optionLabel="label" optionValue="value" (click)="cambiarEstadoSalon(salon)"></p-selectButton>
                 </ng-template>
             </p-card>
-            <p-card *ngIf="salon.laboratorio === 'NO'" header="Salon {{salon.nombre}}" [style]="{ width: '360px' }" class="cards">
+            <p-card *ngIf="salon.laboratorio === 'No'" header="Salon {{salon.nombre}}" [style]="{ width: '360px' }" class="cards">
                 <ng-template pTemplate="header">
-                    <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png" />
+                    <img alt="Card" src="../../../assets/Salon.jpeg" />
                 </ng-template>
                 <ng-template pTemplate="footer">
                     <p-selectButton [options]="stateOptions" [(ngModel)]="salon.estado" optionLabel="label" optionValue="value" (click)="cambiarEstadoSalon(salon)"></p-selectButton>
